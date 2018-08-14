@@ -4,71 +4,65 @@ var comixGuessGame = {
       realName: 'Warren Kenneth Worthington III',
       powers: 'Winged Flight',
       img:
-        'https://upload.wikimedia.org/wikipedia/en/1/1b/X-men_angel_archangel.jpg'
+        './assets/images/Angel.png'
     },
     Beast: {
       realName: 'Hank McCoy',
       powers: 'Superhuman physical strength and agility',
       img:
-        'https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/HenryMcCoy-Beast.jpg/250px-HenryMcCoy-Beast.jpg'
+        './assets/images/Beast.jpg'
     },
     Colossus: {
       realName: 'Piotr Nikolaievitch Rasputin',
       powers:
         'Transformation of body into steel-like substance granting superhuman strength, stamina, endurance and durability',
-      img:
-        'https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Colossus-AvX_Consequences.jpg/250px-Colossus-AvX_Consequences.jpg'
+      img: './assets/images/Colossus.jpg'
     },
     Cyclops: {
       realName: 'Scott Summers',
       powers: 'Optic Blasts',
       img:
-        'https://en.wikipedia.org/wiki/File:Cyclops_(Marvel_Comics_character).jpg'
+        './assets/images/cyclops.jpg'
     },
     Gambit: {
       realName: 'Remy LeBeau',
       powers: 'Kinetic conversion and acceleration',
-      img:
-        'https://upload.wikimedia.org/wikipedia/en/9/94/Gambit_%28Marvel_Comics%29.png'
+      img: './assets/images/Gambit.jpg'
     },
     Iceman: {
       realName: 'Bobby Drake',
       powers: 'Control of Ice and Cold',
-      img:
-        'https://upload.wikimedia.org/wikipedia/en/a/ad/Iceman_%28Bobby_Drake%29.png'
+      img: './assets/images/iceman.jpg'
     },
     'Jean Grey': {
       realName: 'Jean Grey',
       powers: 'Telepathy and Telekinesis',
-      img: 'https://en.wikipedia.org/wiki/File:JeanGreyPhoenix.png'
+      img: './assets/images/jean_grey.jpg'
     },
     Jubilee: {
       realName: 'Jubilation Lee',
       powers: 'Pyrotechnic energy blasts',
-      img: 'https://en.wikipedia.org/wiki/File:Jubilee_(Marvel_Comics).png'
+      img: './assets/images/Jubilee.jpg'
     },
     Nightcrawler: {
       realName: 'Kurt Wagner',
       powers: 'Teleportation',
-      img:
-        'https://upload.wikimedia.org/wikipedia/en/thumb/8/88/Nightcrawler.PNG/250px-Nightcrawler.PNG'
+      img: './assets/images/nightcrawler.jpg'
     },
     Shadowcat: {
       realName: 'Kitty Pryde',
       powers: 'Intangibility',
-      img:
-        'https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/Kitty_Pryde_Astonishing_X-Men_Vol_3_16.png/250px-Kitty_Pryde_Astonishing_X-Men_Vol_3_16.png'
+      img: './assets/images/shadowcat.png'
     },
     Storm: {
       realName: 'Ororo Munroe',
       powers: 'Weather control',
-      img:
-        'https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/X-Men_Storm_Main.png/250px-X-Men_Storm_Main.png'
+      img: './assets/images/Storm.jpg'
     },
     Wolverine: {
       realName: 'James Howlett',
-      powers: 'Teleportation',
-      img: 'https://upload.wikimedia.org/wikipedia/en/c/c8/Marvelwolverine.jpg'
+      powers: 'Superhuman senses and healing',
+      img: './assets/images/wolverine.jpg'
     }
   },
 
