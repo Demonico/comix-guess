@@ -128,14 +128,14 @@ var comixGuessGame = {
   },
 
   restartGame: function() {
-    this.letterGuessed = null;
-    this.selectRandHero();
-    this.wrongGuesses = [];
-    this.correctGuesses = [];
-    this.guessesRemaining = 10;
-    this.buildObfuscatedWord();
-    this.resetHints();
-    
+    this.letterGuessed = null
+    this.selectRandHero()
+    this.wrongGuesses = []
+    this.correctGuesses = []
+    this.guessesRemaining = 10
+    this.buildObfuscatedWord()
+    this.resetHints()
+
     document.querySelector('#wins').innerHTML = `Wins: ${this.wins}`
     document.querySelector('#losses').innerHTML = `Losses: ${this.losses}`
   },
@@ -149,19 +149,16 @@ var comixGuessGame = {
 
   resetHints: function() {
     // remove Hero name, powers and image
-    var card = document.querySelector('.card');
-    var cardBody = document.createElement('div');
-    cardBody.classList.add('card-body');
-    cardBody.textContent='&nbsp;';
-    card.innerHTML = cardBody;
-    
+    document.querySelector('.card-title').textContent = ''
+    document.querySelector('.card-text').textContent = ''
+    document.querySelector('.card-img-top').src =
+      './assets/images/question_mark.png'
 
     // show hint buttons
-    var hintList = document.querySelectorAll('.hint');
-    for(var i = 0; i< hintList.length; i++ ) {
-      hintList[i].parentElement.style.display = "block";
+    var hintList = document.querySelectorAll('.hint')
+    for (var i = 0; i < hintList.length; i++) {
+      hintList[i].parentElement.style.display = 'block'
     }
-
   },
 
   processLetter: function(letter) {
@@ -169,10 +166,10 @@ var comixGuessGame = {
     this.buildObfuscatedWord()
     // check wins
     this.endCheck()
-    this.updatePage();
+    this.updatePage()
   },
 
-  updatePage: function() {    
+  updatePage: function() {
     document.querySelector(
       '#letters-guessed'
     ).innerHTML = `Incorrect Guesses: ${this.wrongGuesses.join(', ')}`
@@ -197,36 +194,30 @@ var comixGuessGame = {
 
   hintHandler: function(hint) {
     // console.log(hint.path[0].id)
-    var hintID = hint.path[0].id;
-    var cardElem = document.querySelector('.card');
-    var cardBody = document.querySelector('.card-body');
-    var divElem = document.createElement('div'); // generec for the text and title
-    var imgElem = document.createElement('img'); // create card image
-    imgElem.classList.add('card-img-top');
+    var hintID = hint.path[0].id
 
     // Hide the button after it is pressed
-    document.querySelector(`#${hintID}`).parentElement.style.display = "none";
+    document.querySelector(`#${hintID}`).parentElement.style.display = 'none'
 
     switch (hintID) {
       case 'real-name':
-        divElem.textContent = "Real Name: " + this.heroList[this.randHero].realName;
-        divElem.classList.add('card-title');
-        cardBody.appendChild(divElem);
-        this.guessesRemaining --;
-        this.updatePage();
+        document.querySelector('.card-title').textContent =
+          'Real Name: ' + this.heroList[this.randHero].realName
+        this.guessesRemaining--
+        this.updatePage()
         break
       case 'power-hint':
-        divElem.textContent = "Powers: " + this.heroList[this.randHero].powers;
-        divElem.classList.add('card-text');
-        cardBody.appendChild(divElem);
-        this.guessesRemaining -= 2;
-        this.updatePage();
+        document.querySelector('.card-text').textContent =
+          'Powers: ' + this.heroList[this.randHero].powers
+        this.guessesRemaining -= 2
+        this.updatePage()
         break
       case 'img-hint':
-        imgElem.src = this.heroList[this.randHero].img;
-        cardElem.appendChild(imgElem);
-        this.guessesRemaining -=3;
-        this.updatePage();
+        document.querySelector('.card-img-top').src = this.heroList[
+          this.randHero
+        ].img
+        this.guessesRemaining -= 3
+        this.updatePage()
     }
   }
 }
